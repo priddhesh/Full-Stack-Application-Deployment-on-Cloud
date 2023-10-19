@@ -18,7 +18,7 @@ function App() {
     if (newData.length === 0) {
       window.alert("Enter data to add!");
     } else {
-      let result = fetch("https://crud-backend-jjcm.onrender.com/addData", {
+      fetch("https://crud-backend-jjcm.onrender.com/addData", {
         method: "post",
         body : JSON.stringify({newData}),
         headers : {
