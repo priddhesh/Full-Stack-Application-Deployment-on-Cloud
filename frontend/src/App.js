@@ -9,7 +9,7 @@ function App() {
   }, []);
 
   const getData = async () => {
-    let result = await fetch("https://crud-backend-jjcm.onrender.com/data");
+    let result = await fetch("https://backend-41tq.onrender.com/data");
     result = await result.json();
     setData(result);
   };
@@ -18,7 +18,7 @@ function App() {
     if (newData.length === 0) {
       window.alert("Enter data to add!");
     } else {
-      fetch("https://crud-backend-jjcm.onrender.com/addData", {
+      fetch("https://backend-41tq.onrender.com/addData", {
         method: "post",
         body : JSON.stringify({newData}),
         headers : {
@@ -36,7 +36,7 @@ function App() {
     let id = e.currentTarget.id;
     let uniqueID = document.getElementById(`id${id}`).innerText;
 
-    let result = fetch(`https://crud-backend-jjcm.onrender.com/deleteData/${uniqueID}`, {
+    let result = fetch(`https://backend-41tq.onrender.com/deleteData/${uniqueID}`, {
       method: "delete",
     });
 
